@@ -7,10 +7,10 @@ import ContentArea from './components/ContentArea/ContentArea';
 function App() {
   const getURLParams = () => {
     const URL = window.location;
-    const URLParams = window.location.split("/");
+    const URLParams = window.location;
 
-    if (URLParams.length > 0) {
-      const params = URLParams[1].split("&&");
+    if (URLParams.split("/").length > 0) {
+      const params = URLParams.split("/")[1].split("&&");
 
       return {
         article: params[0],
