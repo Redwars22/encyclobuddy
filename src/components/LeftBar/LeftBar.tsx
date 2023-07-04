@@ -59,7 +59,7 @@ export default function LeftBar() {
             </div>
             <div style={{
                 color: "darkslategray",
-                textDecorations: "none",
+                textDecoration: "none",
                 display: "flex",
                 flexDirection: "column",
                 gap: "0.5rem"
