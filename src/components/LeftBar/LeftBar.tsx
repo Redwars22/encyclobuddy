@@ -20,7 +20,7 @@ export default function LeftBar() {
                 fontFamily: "serif",
                 color: "#5e5e5e"
             }}>EncycloBuddy</h1>
-            <hr>
+            <hr/>
             <div>
                 <input
                     type="text"
@@ -35,7 +35,7 @@ export default function LeftBar() {
                     />
                 <button onClick={() => window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`}>Pesquisar</button>
             </div>
-            <hr>
+            <hr/>
             <div style={{
                 display: "flex",
                 flexDirection: "column",
@@ -63,7 +63,7 @@ export default function LeftBar() {
                     <option value="monospace">Monospace</option>
                 </select>
             </div>
-            <hr>
+            <hr/>
             <div style={{
                 color: "darkslategray",
                 textDecoration: "none",
