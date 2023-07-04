@@ -6,6 +6,7 @@ export default function ContentArea(props: IContent){
 
     useEffect(() => {
       async function getArticle() {
+        console.log("URL: ", props.url)
         const content = await fetch(`https://pt.wikipedia.org/api/rest_v1/page/html/${props.url}`);
   
         const res = await content.text();

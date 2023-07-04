@@ -9,8 +9,12 @@ function App() {
     const URL = window.location;
     const URLParams = window.location.href.split("/");
 
+    console.log({URL, URLParams})
+
     if (URLParams.length > 0) {
       const params = URLParams[1].split("&&");
+
+      console.log(params)
 
       return {
         article: params[0],
