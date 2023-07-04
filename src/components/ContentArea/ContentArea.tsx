@@ -38,7 +38,7 @@ export default function ContentArea(props: IContent){
             justifyContent:"center"
           }}>
             <span style={{
-              fontSize: "20rem"
+              fontSize: "10rem"
             }}>😕</span>
             <h2>There was en error while fetching the article</h2>
             <p>Please make sure the article exists. If you haven't searched for one yet, use the search bar on the left of this page.</p>
