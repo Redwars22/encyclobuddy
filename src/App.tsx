@@ -36,7 +36,7 @@ function App() {
       <LeftBar />
       <ContentArea 
         url={URLParams.article} 
-        font={'monospace'} 
+        font={'sans-serif'} 
         size={'1rem'} 
         theme={'light'} 
         language={URLParams.lang as "pt"} />
