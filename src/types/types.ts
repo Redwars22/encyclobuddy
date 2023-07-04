@@ -3,4 +3,5 @@ export type IContent = {
     font: "serif" | "sans-serif" | "monospace";
     size: string;
     theme: "light" | "creme" | "dark";
+    language: "en" | "pt" | "la";
 }
