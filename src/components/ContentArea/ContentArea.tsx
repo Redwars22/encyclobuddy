@@ -3,6 +3,7 @@ import { IContent } from "../../types/types"
 
 export default function ContentArea(props: IContent){
     const [content, setContent] = useState("");
+    const [hasFailed, setHasFailed] = useState<boolean>(false);
 
     useEffect(() => {
       async function getArticle() {
@@ -12,7 +13,7 @@ export default function ContentArea(props: IContent){
         const res = await content.text();
         document.getElementById("content-area")!.innerHTML = res;
         } catch(err){
-          window.alert(err);
+          setHasFailed(true);
         }
       }
   
@@ -29,6 +30,19 @@ export default function ContentArea(props: IContent){
             textAlign: "left",
             fontFamily: props.font,
             fontSize: props.size
-        }}></div>
+        }}>
+          {hasFailed && <div style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent:"center"
+          }}>
+            <span style={{
+              fontSize: "20rem"
+            }}>😕</span>
+            <h2>There was en error while fetching the article</h2>
+            <p>Please make sure the article exists. If you haven't searched for one yet, use the search bar on the left of this page.</p>
+          </div>}
+        </div>
     )
 }
