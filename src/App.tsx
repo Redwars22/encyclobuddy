@@ -37,7 +37,7 @@ function App() {
         font={'monospace'} 
         size={'1rem'} 
         theme={'light'} 
-        language={URLParams.lang} />
+        language={URLParams.lang as "pt"} />
     </div>
   );
 }
