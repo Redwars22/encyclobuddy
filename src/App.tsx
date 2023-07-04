@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App" style={{
       display: "grid",
-      gridTemplateColumns: open ? "20% 80%" : "100%"
+      gridTemplateColumns: "20% 80%"
     }}>
       <LeftBar />
       <ContentArea url={'Aranha'} font={'monospace'} size={'1rem'} theme={'light'} />
