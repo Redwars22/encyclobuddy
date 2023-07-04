@@ -41,7 +41,8 @@ export default function ContentArea(props: IContent){
               fontSize: "10rem"
             }}>😕</span>
             <h2>There was en error while fetching the article</h2>
-            <p>Please make sure the article exists. <br/>If you haven't searched for one yet, use the search bar on the left of this page.</p>
+            <p>Please make sure the article exists.</p>
+            <p>If you haven't searched for one yet, use the search bar on the left of this page.</p>
           </div>}
         </div>
     )
