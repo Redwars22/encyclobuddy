@@ -57,9 +57,11 @@ export default function LeftBar() {
                     <option value="monospace">Monospace</option>
                 </select>
             </div>
+            <div>
             <a href="http://">Ver Original</a>
             <a href="http://">Sobre</a>
             <a href="http://">Ajuda</a>
+            </div>
         </div>
     )
 }
