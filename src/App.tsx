@@ -11,7 +11,7 @@ function App() {
       gridTemplateColumns: open ? "20% 80%" : "100%"
     }}>
       <LeftBar />
-        <ContentArea url={'Aranha'} font={'monospace'} size={'1rem'} theme={'light'} />
+      <ContentArea url={'Aranha'} font={'monospace'} size={'1rem'} theme={'light'} />
     </div>
   );
 }
