@@ -5,23 +5,22 @@ import LeftBar from './components/LeftBar/LeftBar';
 import ContentArea from './components/ContentArea/ContentArea';
 
 function App() {
-  const [open, setOpen] = useState<boolean>(true);
   return (
     <div className="App" style={{
       display: "grid",
       gridTemplateColumns: open ? "20% 80%" : "100%"
     }}>
-      {open && <LeftBar />}
-      <div>
-        <div><button onClick={() => {
-          setOpen(!open)
-        }}>
-          {open ? "✖" : "➕"}
-        </button></div>
-        <ContentArea url={'Aranha'} font={'monospace'} size={'2rem'} theme={'light'} />
-      </div>
+      <LeftBar />
+        <ContentArea url={'Aranha'} font={'monospace'} size={'1rem'} theme={'light'} />
     </div>
   );
 }
 
 export default App;
+
+/*
+{open ? "✖" : "➕"}
+        <div><button onClick={() => {
+          setOpen(!open)
+        }}>
+*/

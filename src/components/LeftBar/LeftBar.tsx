@@ -1,4 +1,8 @@
+import React from "react";
+
 export default function LeftBar() {
+    const [open, setOpen] = React.useState<boolean>(true);
+
     return (
         <div style={{
             backgroundColor: "#d6d6d6",
