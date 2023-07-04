@@ -26,7 +26,7 @@ export default function LeftBar() {
                     name=""
                     id=""
                     placeholder="Digite o título do artigo" 
-                    value={query} 
+                    value={args.query} 
                     onChange={(e) => setArgs((s)=>({
                         ...s,
                         query: e.target.value
@@ -35,7 +35,7 @@ export default function LeftBar() {
                 <button onClick={() => window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`}>Pesquisar</button>
             </div>
             <div>
-                <select name="" id="" value="en" onChange={(e)=> setArgs((s)=>({
+                <select name="" id="" value={args.lang} onChange={(e)=> setArgs((s)=>({
                     ...s,
                     lang: e.target.value
                 }))}>
@@ -57,6 +57,9 @@ export default function LeftBar() {
                     <option value="monospace">Monospace</option>
                 </select>
             </div>
+            <a href="http://">Ver Original</a>
+            <a href="http://">Sobre</a>
+            <a href="http://">Ajuda</a>
         </div>
     )
 }
