@@ -5,3 +5,5 @@ export type IContent = {
     theme: "light" | "creme" | "dark";
     language: "en" | "pt" | "la";
 }
+
+export type IURLParams = {}

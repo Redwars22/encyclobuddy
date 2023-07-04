@@ -7,9 +7,7 @@ import ContentArea from './components/ContentArea/ContentArea';
 function App() {
   const getURLParams = () => {
     const URL = window.location;
-    const URLParams = URL.toString().replace("https://", "").split("/");
-
-    console.log({URL, URLParams})
+    const URLParams = URL.toString().replace("https://", "").replace("?q=","").split("/");
 
     if (URLParams.length > 0) {
       const params = URLParams[1].split("&&");

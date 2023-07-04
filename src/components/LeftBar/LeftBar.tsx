@@ -1,7 +1,13 @@
 import React from "react";
 
 export default function LeftBar() {
-    const [query, setQuery] = React.useState<string>("");
+    const [args, setArgs] = React.useState<{
+        query: string;
+        lang: string
+    }>({
+        query: "",
+        lang: ""
+    });
 
     return (
         <div style={{
@@ -15,11 +21,24 @@ export default function LeftBar() {
                 color: "#5e5e5e"
             }}>EncycloBuddy</h1>
             <div>
-                <input type="text" name="" id="" placeholder="Digite o título do artigo" value={query} />
-                <button onClick={()=> window.alert(query)}>Pesquisar</button>
+                <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Digite o título do artigo" 
+                    value={query} 
+                    onChange={(e) => setArgs((s)=>({
+                        ...s,
+                        query: e.target.value
+                    }))}
+                    />
+                <button onClick={() => window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`}>Pesquisar</button>
             </div>
             <div>
-                <select name="" id="" value="en">
+                <select name="" id="" value="en" onChange={(e)=> setArgs((s)=>({
+                    ...s,
+                    lang: e.target.value
+                }))}>
                     <option value="en">English</option>
                     <option value="pt">Português</option>
                     <option value="la">Latina</option>
