@@ -20,6 +20,9 @@ export default function LeftBar() {
                 fontFamily: "serif",
                 color: "#5e5e5e"
             }}>EncycloBuddy</h1>
+            <p>
+                An alternative Wikipedia client developed by AndrewNation.
+            </p>
             <hr/>
             <div>
                 <input
@@ -72,8 +75,8 @@ export default function LeftBar() {
                 gap: "0.5rem"
             }}>
             <a href="http://">Ver Original</a>
-            <a href="http://">Sobre</a>
-            <a href="http://">Ajuda</a>
+            <a href="">Sobre</a>
+            <a href="https://andrewnationdev.vercel.app/docs/projects/encyclobuddy">Ajuda</a>
             </div>
         </div>
     )
