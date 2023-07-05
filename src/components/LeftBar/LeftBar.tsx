@@ -9,6 +9,14 @@ export default function LeftBar() {
         lang: ""
     });
 
+    const changeProperties = (key: "font-size" | "font-syle" | "theme", value: string) => {
+        if(key === "font-size")
+            document.getElementById("content-area")?.style.fontSize = value;
+        
+        if(key === "font-syle")
+            document.getElementById("content-area")?.style.fontFamily = value;
+    }
+
     return (
         <div style={{
             backgroundColor: "#d6d6d6",
@@ -52,15 +60,19 @@ export default function LeftBar() {
                     <option value="pt">Português</option>
                     <option value="la">Latina</option>
                 </select>
-                <select name="" id="" value="1rem">
-                    <option value="">0.75rem</option>
+                <select name="" id="" value="1rem" onChange={(e)=>{
+                    changeProperties("font-size", e.target.value)
+                }}>
+                    <option value="0.75">0.75rem</option>
                     <option value="1rem">1rem</option>
-                    <option value="">1.25rem</option>
-                    <option value="">1.50rem</option>
-                    <option value="">1.75rem</option>
-                    <option value="">2rem</option>
+                    <option value="1.25rem">1.25rem</option>
+                    <option value="1.50rem">1.50rem</option>
+                    <option value="1.75rem">1.75rem</option>
+                    <option value="2rem">2rem</option>
                 </select>
-                <select name="" id="" value="sans-serif">
+                <select name="" id="" value="sans-serif" onChange={(e)=>{
+                    changeProperties("font-style", e.target.value)
+                }}>
                     <option value="serif">Serif</option>
                     <option value="sans-serif">Sans Serif</option>
                     <option value="monospace">Monospace</option>

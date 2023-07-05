@@ -19,6 +19,7 @@ export default function ContentArea(props: IContent){
   
       getArticle();
     })
+    
     return(
         <div id="content-area" style={{
             height: "calc(100vh - 3rem)",
