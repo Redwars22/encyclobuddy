@@ -17,7 +17,7 @@ export default function LeftBar() {
         if(key === "font-size")
             document.getElementById("content-area")!.style.fontSize = value;
         
-        if(key === "font-syle")
+        if(key === "font-style")
             document.getElementById("content-area")!.style.fontFamily = value;
     }
 
