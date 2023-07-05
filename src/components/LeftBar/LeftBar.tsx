@@ -120,7 +120,7 @@ export default function LeftBar() {
                     changeProperties("theme", e.target.value);
                     setArgs((s)=>({
                         ...s,
-                        theme: e.target.value
+                        theme: e.target.value as "light"
                     }))
                 }}>
                     <option value="light">Light</option>
