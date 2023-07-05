@@ -13,7 +13,7 @@ export default function LeftBar() {
         fontStyle: "serif"
     });
 
-    const changeProperties = (key: "font-size" | "font-syle" | "theme", value: string) => {
+    const changeProperties = (key: "font-size" | "font-style" | "theme", value: string) => {
         if(key === "font-size")
             document.getElementById("content-area")!.style.fontSize = value;
         
