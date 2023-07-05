@@ -6,11 +6,13 @@ export default function LeftBar() {
         lang: string;
         fontSize: string;
         fontStyle: string;
+        theme:  "light" | "creme" | "dark" | "darkest";
     }>({
         query: "",
         lang: "",
         fontSize: "1rem",
-        fontStyle: "serif"
+        fontStyle: "serif",
+        theme: "light"
     });
 
     const changeProperties = (key: "font-size" | "font-style" | "theme", value: string) => {
@@ -19,6 +21,27 @@ export default function LeftBar() {
         
         if(key === "font-style")
             document.getElementById("content-area")!.style.fontFamily = value;
+
+        if(key === "theme"){
+            switch(value){
+                case "light":
+                    document.getElementById("content-area")!.style.backgroundColor = "#fff";
+                    document.getElementById("content-area")!.style.color = "#474747";
+                    break;
+                case "creme":
+                    document.getElementById("content-area")!.style.backgroundColor = "#feecc8";
+                    document.getElementById("content-area")!.style.color = "#474747";
+                    break;
+                case "dark":
+                    document.getElementById("content-area")!.style.backgroundColor = "#0f131c";
+                    document.getElementById("content-area")!.style.color = "#fff";
+                    break;
+                case "darkest":
+                    document.getElementById("content-area")!.style.backgroundColor = "#000";
+                    document.getElementById("content-area")!.style.color = "#fff";
+                    break;
+            }   
+        }
     }
 
     return (
@@ -56,6 +79,7 @@ export default function LeftBar() {
                 flexDirection: "column",
                 gap: "0.5rem"
             }}>
+                <label htmlFor="">Language</label>
                 <select name="" id="" value={args.lang} onChange={(e)=> setArgs((s)=>({
                     ...s,
                     lang: e.target.value
@@ -64,6 +88,7 @@ export default function LeftBar() {
                     <option value="pt">Português</option>
                     <option value="la">Latina</option>
                 </select>
+                <label htmlFor="">Font Size</label>
                 <select name="" id="" value={args.fontSize} onChange={(e)=>{
                     changeProperties("font-size", e.target.value);
                     setArgs((s)=>({
@@ -78,6 +103,7 @@ export default function LeftBar() {
                     <option value="1.75rem">1.75rem</option>
                     <option value="2rem">2rem</option>
                 </select>
+                <label htmlFor="">Font Style</label>
                 <select name="" id="" value={args.fontStyle} onChange={(e)=>{
                     changeProperties("font-style", e.target.value);
                     setArgs((s)=>({
@@ -88,6 +114,19 @@ export default function LeftBar() {
                     <option value="serif">Serif</option>
                     <option value="sans-serif">Sans Serif</option>
                     <option value="monospace">Monospace</option>
+                </select>
+                <label htmlFor="">Theme</label>
+                <select name="" id="" value={args.theme} onChange={(e)=>{
+                    changeProperties("theme", e.target.value);
+                    setArgs((s)=>({
+                        ...s,
+                        theme: e.target.value
+                    }))
+                }}>
+                    <option value="light">Light</option>
+                    <option value="creme">Creme</option>
+                    <option value="dark">Dark</option>
+                    <option value="darkest">Darkest</option>
                 </select>
             </div>
             <hr/>
