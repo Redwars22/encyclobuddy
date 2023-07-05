@@ -3,10 +3,14 @@ import React from "react";
 export default function LeftBar() {
     const [args, setArgs] = React.useState<{
         query: string;
-        lang: string
+        lang: string;
+        fontSize: string;
+        fontStyle: string;
     }>({
         query: "",
-        lang: ""
+        lang: "",
+        fontSize: "1rem",
+        fontStyle: "serif"
     });
 
     const changeProperties = (key: "font-size" | "font-syle" | "theme", value: string) => {
@@ -60,8 +64,12 @@ export default function LeftBar() {
                     <option value="pt">Português</option>
                     <option value="la">Latina</option>
                 </select>
-                <select name="" id="" value="1rem" onChange={(e)=>{
-                    changeProperties("font-size", e.target.value)
+                <select name="" id="" value={args.fontSize} onChange={(e)=>{
+                    changeProperties("font-size", e.target.value);
+                    setArgs((s)=>({
+                        ...s,
+                        fontSize: e.target.value
+                    }))
                 }}>
                     <option value="0.75">0.75rem</option>
                     <option value="1rem">1rem</option>
@@ -70,8 +78,12 @@ export default function LeftBar() {
                     <option value="1.75rem">1.75rem</option>
                     <option value="2rem">2rem</option>
                 </select>
-                <select name="" id="" value="sans-serif" onChange={(e)=>{
-                    changeProperties("font-style", e.target.value)
+                <select name="" id="" value={args.fontStyle} onChange={(e)=>{
+                    changeProperties("font-style", e.target.value);
+                    setArgs((s)=>({
+                        ...s,
+                        fontStyle: e.target.value
+                    }))
                 }}>
                     <option value="serif">Serif</option>
                     <option value="sans-serif">Sans Serif</option>
