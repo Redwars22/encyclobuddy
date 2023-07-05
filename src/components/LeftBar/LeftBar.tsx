@@ -79,7 +79,6 @@ export default function LeftBar() {
                 flexDirection: "column",
                 gap: "0.5rem"
             }}>
-                <label htmlFor="">Language</label>
                 <select name="" id="" value={args.lang} onChange={(e)=> setArgs((s)=>({
                     ...s,
                     lang: e.target.value
@@ -88,7 +87,6 @@ export default function LeftBar() {
                     <option value="pt">Português</option>
                     <option value="la">Latina</option>
                 </select>
-                <label htmlFor="">Font Size</label>
                 <select name="" id="" value={args.fontSize} onChange={(e)=>{
                     changeProperties("font-size", e.target.value);
                     setArgs((s)=>({
@@ -103,7 +101,6 @@ export default function LeftBar() {
                     <option value="1.75rem">1.75rem</option>
                     <option value="2rem">2rem</option>
                 </select>
-                <label htmlFor="">Font Style</label>
                 <select name="" id="" value={args.fontStyle} onChange={(e)=>{
                     changeProperties("font-style", e.target.value);
                     setArgs((s)=>({
@@ -115,7 +112,6 @@ export default function LeftBar() {
                     <option value="sans-serif">Sans Serif</option>
                     <option value="monospace">Monospace</option>
                 </select>
-                <label htmlFor="">Theme</label>
                 <select name="" id="" value={args.theme} onChange={(e)=>{
                     changeProperties("theme", e.target.value);
                     setArgs((s)=>({
