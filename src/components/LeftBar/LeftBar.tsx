@@ -15,10 +15,10 @@ export default function LeftBar() {
 
     const changeProperties = (key: "font-size" | "font-syle" | "theme", value: string) => {
         if(key === "font-size")
-            document.getElementById("content-area")?.style.fontSize = value;
+            document.getElementById("content-area")!.style.fontSize = value;
         
         if(key === "font-syle")
-            document.getElementById("content-area")?.style.fontFamily = value;
+            document.getElementById("content-area")!.style.fontFamily = value;
     }
 
     return (
