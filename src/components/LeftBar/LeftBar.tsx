@@ -55,9 +55,11 @@ export default function LeftBar() {
             <img width="50px" src="https://cdn1.iconfinder.com/data/icons/education-filled-outline-8/64/Education-Filled_17-256.png" />
             <h1 style={{
                 fontFamily: "serif",
-                color: "#5e5e5e"
+                color: "lightgrey"
             }}>EncycloBuddy</h1>
-            <p>
+            <p style={{
+                color: "lightgrey"
+            }}>
                 An alternative Wikipedia client developed by AndrewNation.
             </p>
             <hr/>
@@ -66,7 +68,7 @@ export default function LeftBar() {
                     type="text"
                     name=""
                     id=""
-                    placeholder="Digite o título do artigo" 
+                    placeholder="Type here to open an article" 
                     value={args.query} 
                     onChange={(e) => setArgs((s)=>({
                         ...s,
@@ -135,9 +137,9 @@ export default function LeftBar() {
                 flexDirection: "column",
                 gap: "0.5rem"
             }}>
-            <a href="http://">Ver Original</a>
-            <a href="">Sobre</a>
-            <a href="https://andrewnationdev.vercel.app/docs/projects/encyclobuddy">Ajuda</a>
+            <a href="http://">See Original</a>
+            <a href="">About</a>
+            <a href="https://andrewnationdev.vercel.app/docs/projects/encyclobuddy">Help</a>
             </div>
         </div>
     )

@@ -18,5 +18,11 @@ input, select, button {
   border-radius: 0.5rem;
   border: 2px solid darkgray;
   margin: 0.25rem;
-  color: darkslategray;
+  color: white;
+  background-color: #a2a9b1;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
