@@ -29,10 +29,7 @@ function App() {
   const URLParams = getURLParams();
 
   return (
-    <div className="App" style={{
-      display: "grid",
-      gridTemplateColumns: "20% 80%"
-    }}>
+    <div className="App">
       <LeftBar />
       <ContentArea 
         url={URLParams.article} 
@@ -51,4 +48,11 @@ export default App;
         <div><button onClick={() => {
           setOpen(!open)
         }}>
+*/
+
+/*
+ style={{
+      display: "grid",
+      gridTemplateColumns: "20% 80%"
+    }}
 */
