@@ -9,7 +9,7 @@ export default function LeftBar() {
         theme:  "light" | "creme" | "dark" | "darkest";
     }>({
         query: "",
-        lang: "",
+        lang: "en",
         fontSize: "1rem",
         fontStyle: "serif",
         theme: "light"
@@ -75,7 +75,7 @@ export default function LeftBar() {
                         query: e.target.value
                     }))}
                     />
-                <button onClick={() => window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`}>Pesquisar</button>
+                <button onClick={() => window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`}>Search</button>
             </div>
             <hr/>
             <div style={{
