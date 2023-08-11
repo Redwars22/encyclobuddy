@@ -84,12 +84,14 @@ export default function LeftBar(props:{ url: string}) {
                     ...s,
                     lang: e.target.value
                 }))}>
-                    <option value="">Deutsch</option>
+                <option value="ast">Asturianu</option>
+                    <option value="de">Deutsch</option>
                     <option value="en">English</option>
-                    <option value="">Español</option>
-                    <option value="">Français</option>
-                    <option value="">Italiano</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="it">Italiano</option>
                     <option value="la">Latina</option>
+                    <option value="mwl">Mirandês</option>
                     <option value="pt">Português</option>
                 </select>
                 <select name="" id="" value={args.fontSize} onChange={(e)=>{
@@ -133,7 +135,7 @@ export default function LeftBar(props:{ url: string}) {
             <hr/>
             <div className="action-buttons-area">
                 <button onClick={() => 
-                    window.location.href = `https://${args.lang}.wiktionary.org/wiki/${args.query}`
+                    window.location.href = `https://${args.lang}.wikipedia.org/wiki/${args.query}`
                 }>
                     <i className="bi bi-eye"></i>
                 </button>
