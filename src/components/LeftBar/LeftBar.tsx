@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./leftbar.css";
 
 export default function LeftBar(props:{ url: string}) {
