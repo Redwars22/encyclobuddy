@@ -130,16 +130,15 @@ export default function LeftBar() {
                 textDecoration: "none",
                 display: "flex",
                 gap: "0.5rem",
-                marginLeft: "auto",
-                marginRight: "auto"
+                justifyContent: "center"
             }}>
                 <button onClick={() => 
-                    window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`
+                    window.location.href = `https://${args.lang}.wiktionary.org/wiki/{args.query}`
                 }>
                     <i className="bi bi-eye"></i>
                 </button>
                 <button onClick={() => 
-                    window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`
+                    window.location.href = ``
                 }>
                     <i className="bi bi-info-circle"></i>
                 </button>
