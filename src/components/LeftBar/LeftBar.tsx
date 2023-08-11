@@ -1,7 +1,7 @@
 import React from "react";
 import "./leftbar.css";
 
-export default function LeftBar() {
+export default function LeftBar(url: string) {
     const [args, setArgs] = React.useState<{
         query: string;
         lang: string;
@@ -15,6 +15,13 @@ export default function LeftBar() {
         fontStyle: "serif",
         theme: "light"
     });
+
+    useEffect(()=>{
+        setArgs((s)=>({
+            ...s,
+            query: url !== "" ? url : ""
+        }))
+    })
 
     const changeProperties = (key: "font-size" | "font-style" | "theme", value: string) => {
         if(key === "font-size")
@@ -77,9 +84,13 @@ export default function LeftBar() {
                     ...s,
                     lang: e.target.value
                 }))}>
+                    <option value="">Deutsch</option>
                     <option value="en">English</option>
-                    <option value="pt">Português</option>
+                    <option value="">Español</option>
+                    <option value="">Français</option>
+                    <option value="">Italiano</option>
                     <option value="la">Latina</option>
+                    <option value="pt">Português</option>
                 </select>
                 <select name="" id="" value={args.fontSize} onChange={(e)=>{
                     changeProperties("font-size", e.target.value);
