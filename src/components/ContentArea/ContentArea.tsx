@@ -31,7 +31,7 @@ export default function ContentArea(props: IContent){
               fontSize: "10rem",
               color: "red"
             }}>
-              <i class="bi bi-emoji-frown"></i>
+              <i className="bi bi-emoji-frown"></i>
             </span>
             <h2>There was en error while fetching the article</h2>
             <p>Please make sure the article exists.</p>
