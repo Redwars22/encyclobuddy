@@ -67,7 +67,9 @@ export default function LeftBar() {
                         query: e.target.value
                     }))}
                     />
-                <button onClick={() => window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`}>Search</button>
+                <button onClick={() => window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`}>
+                    <i className="bi bi-search-heart-fill"></i>
+                </button>
             </div>
             <hr/>
             <div className="form">
@@ -125,7 +127,7 @@ export default function LeftBar() {
                     <i className="bi bi-eye"></i>
                 </button>
                 <button onClick={() => 
-                    window.location.href = ``
+                    alert("Encyclobuddy. 2023. AndrewNation - todos os diretos reservados")
                 }>
                     <i className="bi bi-info-circle"></i>
                 </button>
