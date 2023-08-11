@@ -120,7 +120,7 @@ export default function LeftBar() {
             <hr/>
             <div className="action-buttons-area">
                 <button onClick={() => 
-                    window.location.href = `https://${args.lang}.wiktionary.org/wiki/{args.query}`
+                    window.location.href = `https://${args.lang}.wiktionary.org/wiki/${args.query}`
                 }>
                     <i className="bi bi-eye"></i>
                 </button>
