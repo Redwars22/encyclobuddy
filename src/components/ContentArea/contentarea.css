@@ -1,0 +1,23 @@
+.content-area {
+    overflow: auto;
+    text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+    .content-area {
+        max-width: calc(100vh - 1.50rem);
+        padding: 1.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .content-area {
+        height: calc(100vh - 3rem);
+        max-height: calc(100vh - 5rem);
+        padding: 2.5rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}

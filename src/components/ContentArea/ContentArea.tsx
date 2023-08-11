@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { IContent } from "../../types/types"
+import { IContent } from "../../types/types";
+import "./contentarea.css";
 
 export default function ContentArea(props: IContent){
     const [content, setContent] = useState("");
@@ -21,14 +22,7 @@ export default function ContentArea(props: IContent){
     })
     
     return(
-        <div id="content-area" style={{
-            height: "calc(100vh - 3rem)",
-            maxHeight: "calc(100vh - 5rem)",
-            padding: "2.5rem",
-            paddingLeft: "5rem",
-            paddingRight: "5rem",
-            overflow: "auto",
-            textAlign: "left",
+        <div id="content-area" className="content-area" style={{
             fontFamily: props.font,
             fontSize: props.size
         }}>

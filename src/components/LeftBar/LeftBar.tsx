@@ -1,4 +1,5 @@
 import React from "react";
+import "./leftbar.css";
 
 export default function LeftBar() {
     const [args, setArgs] = React.useState<{
@@ -45,13 +46,7 @@ export default function LeftBar() {
     }
 
     return (
-        <div style={{
-            backgroundColor: "#54595d",
-            height: "calc(100vh - 2rem)",
-            padding: "1rem",
-            maxHeight: "calc(100vh - 2rem)",
-            overflow: "auto"
-        }}>
+        <div className="left-bar">
             <img width="50px" src="https://cdn1.iconfinder.com/data/icons/education-filled-outline-8/64/Education-Filled_17-256.png" />
             <h1 style={{
                 fontFamily: "serif",
