@@ -48,10 +48,7 @@ export default function LeftBar() {
     return (
         <div className="left-bar">
             <img width="50px" src="https://cdn1.iconfinder.com/data/icons/education-filled-outline-8/64/Education-Filled_17-256.png" />
-            <h1 style={{
-                fontFamily: "serif",
-                color: "lightgrey"
-            }}>EncycloBuddy</h1>
+            <h1 className="encyclobuddy-title">EncycloBuddy</h1>
             <p style={{
                 color: "lightgrey"
             }}>
@@ -73,11 +70,7 @@ export default function LeftBar() {
                 <button onClick={() => window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`}>Search</button>
             </div>
             <hr/>
-            <div style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.5rem"
-            }}>
+            <div className="form">
                 <select name="" id="" value={args.lang} onChange={(e)=> setArgs((s)=>({
                     ...s,
                     lang: e.target.value
@@ -125,13 +118,7 @@ export default function LeftBar() {
                 </select>
             </div>
             <hr/>
-            <div style={{
-                color: "darkslategray",
-                textDecoration: "none",
-                display: "flex",
-                gap: "0.5rem",
-                justifyContent: "center"
-            }}>
+            <div className="action-buttons-area">
                 <button onClick={() => 
                     window.location.href = `https://${args.lang}.wiktionary.org/wiki/{args.query}`
                 }>

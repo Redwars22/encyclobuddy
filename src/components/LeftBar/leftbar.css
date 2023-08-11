@@ -4,6 +4,29 @@
     overflow: auto;
 }
 
+.encyclobuddy-title {
+    font-family: serif;
+    color: lightgrey;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.action-buttons-area {
+    color: darkslategray;
+    text-decoration: none;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.action-buttons-area > button {
+    background-color: #3b3c3d;
+}
+
 @media screen and (min-width: 1025px) {
     .left-bar {
         height: calc(100vh - 2rem);
