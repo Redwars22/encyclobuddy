@@ -1,7 +1,7 @@
 import React from "react";
 import "./leftbar.css";
 
-export default function LeftBar(url: string) {
+export default function LeftBar(props:{ url: string}) {
     const [args, setArgs] = React.useState<{
         query: string;
         lang: string;
@@ -19,7 +19,7 @@ export default function LeftBar(url: string) {
     useEffect(()=>{
         setArgs((s)=>({
             ...s,
-            query: url !== "" ? url : ""
+            query: props.url !== "" ? props.url : ""
         }))
     })
 
