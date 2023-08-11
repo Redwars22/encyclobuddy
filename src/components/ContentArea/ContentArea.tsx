@@ -26,15 +26,13 @@ export default function ContentArea(props: IContent){
             fontFamily: props.font,
             fontSize: props.size
         }}>
-          {hasFailed && <div style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent:"center"
-          }}>
+          {hasFailed && <div className="error-page">
             <span style={{
-              fontSize: "10rem"
-            }}>😕</span>
+              fontSize: "10rem",
+              color: "red"
+            }}>
+              <i class="bi bi-emoji-frown"></i>
+            </span>
             <h2>There was en error while fetching the article</h2>
             <p>Please make sure the article exists.</p>
             <p>If you haven't searched for one yet, use the search bar on the left of this page.</p>
