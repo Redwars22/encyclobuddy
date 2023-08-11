@@ -129,12 +129,23 @@ export default function LeftBar() {
                 color: "darkslategray",
                 textDecoration: "none",
                 display: "flex",
-                flexDirection: "column",
                 gap: "0.5rem"
             }}>
-            <a href="http://">See Original</a>
-            <a href="">About</a>
-            <a href="https://andrewnationdev.vercel.app/docs/projects/encyclobuddy">Help</a>
+                <button onClick={() => 
+                    window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`
+                }>
+                    <i className="bi-eye-fill"></i>
+                </button>
+                <button onClick={() => 
+                    window.location.href = `https://encyclobuddy.vercel.app/${args.query}&&${args.lang}`
+                }>
+                    <i className="bi-info-circle-fill"></i>
+                </button>
+                <button onClick={() => 
+                    window.location.href = `https://andrewnationdev.vercel.app/docs/projects/encyclobuddy`
+                }>
+                    <i className="bi-question-diamond-fill"></i>
+                </button>
             </div>
         </div>
     )
