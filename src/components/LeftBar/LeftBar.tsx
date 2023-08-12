@@ -21,7 +21,7 @@ export default function LeftBar(props:{ url: string}) {
             ...s,
             query: props.url !== "" ? props.url : ""
         }))
-    })
+    }, [])
 
     const changeProperties = (key: "font-size" | "font-style" | "theme", value: string) => {
         if(key === "font-size")
