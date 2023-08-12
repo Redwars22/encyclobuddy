@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      <LeftBar url={URLParams.article}/>
+      <LeftBar url={URLParams.article} lang={URLParams.lang}/>
       <ContentArea 
         url={URLParams.article} 
         font={'sans-serif'} 
